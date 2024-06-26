@@ -1,0 +1,61 @@
+SOLID principles:
+
+Single responsibility
+Open enhancement closed editing
+Liskov's subtitution
+Interface segragation
+Dependency inversion
+
+
+Collections package:
+Interface:
+can an interface extend a class ? what is the use ?
+Extends vs implements ?
+Abstract class ?
+Multi-Threading
+
+
+Iterable(extends) --> Collection(extends) --> Collections(final class)
+
+
+      Interface --> Implementation
+ List(I) implements --> ArrayList(Dynamic Array) , LinkedList,Vector
+ Set(I) implements  --> Hashset, SortedSet, LinkedHashSet,TreeSet
+ Map(I) implements --> HashTable,HashMap,TreeMap, LinkedHashMap
+
+
+
+ Ordered DS:
+ NavigatableSet(implements) --> TreeSet
+ List(I) implements --> LinkedList(doublely LL)
+
+
+ Thread Safe Collections:
+
+
+Non Thread safe Collections:
+
+
+
+Implemented DataStructures:
+Array
+ArrayList
+
+
+HashSet
+LinkedList
+DoublyLinkedList
+
+
+Stack
+Queue
+PriorityQueue
+Tri
+
+ArrayBisection
+Tree(B-Tree)
+Graph -- BFS,DFS
+
+Methodologies:
+Divide and conquer
+Recursion

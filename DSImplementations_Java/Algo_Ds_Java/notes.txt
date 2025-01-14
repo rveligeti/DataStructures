@@ -36,7 +36,6 @@ Iterable(extends) --> Collection(extends) --> Collections(final class)
 Non Thread safe Collections:
 
 
-
 Implemented DataStructures:
 Array
 ArrayList
@@ -47,15 +46,47 @@ LinkedList
 DoublyLinkedList
 
 
-Stack
-Queue
+Stack-- Done
+Queue --done
+Queue --with doubly LL
 PriorityQueue
 Tri
 
 ArrayBisection
 Tree(B-Tree)
-Graph -- BFS,DFS
+Graph -- BFS,DFS(In-order, pre-order, post-order )
+
 
 Methodologies:
 Divide and conquer
 Recursion
+
+
+Cache's:
+First In, First Out (FIFO):
+Evicts the oldest items in the cache first, regardless of their usage frequency.
+
+Least Recently Used (LRU):
+Evicts the least recently accessed items first, assuming that items not accessed recently are less likely to be accessed in the future.
+
+Most Recently Used (MRU):
+Opposite of LRU, it evicts the most recently used items first. This can be useful when the most recent items are less likely to be reaccessed.
+
+Least Frequently Used (LFU):
+Prioritizes eviction of least frequently accessed items, assuming frequent access implies future relevance.
+
+Most Frequently Used (MFU):
+Eviction policy is a cache eviction strategy where the cache identifies and removes the data items that are accessed most frequently.
+
+Random Replacement (RR):
+Randomly selects a cache item to evict, which can be simpler to implement and effective in specific scenarios.
+
+Size-Based Eviction:
+Evicts items based on their size to manage the memory footprint, often used in combination with other policies.
+
+Implement Tri
+
+
+
+
+

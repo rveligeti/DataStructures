@@ -5,7 +5,7 @@ public class LinkedList <E> implements List{
     private Node<E> node;
 
     private int size;
-    private static class Node<E>{
+    private class Node<E>{
         E data;
         Node<E> next;
         public Node(E data, Node<E> next ) {

@@ -24,24 +24,42 @@ class QueueTest {
     void functionalTest() {
         Queue<Integer> integerQueue = new Queue<>();
         // get size and verify its zero
-        Assert.assertTrue(integerQueue.getSize() == 0);
+        assertEquals(0, integerQueue.size);
 
         // add 1 item
         integerQueue.add(1);
-        Assertions.assertEquals(1,integerQueue.peek());
-        Assertions.assertEquals(1,integerQueue.getSize());
+        assertEquals(1,integerQueue.peek());
+        assertEquals(1,integerQueue.size);
 
         // remove 1 item
-        Assertions.assertEquals(1,integerQueue.remove());
-        Assert.assertTrue(integerQueue.getSize() == 0);
+        assertEquals(1,integerQueue.remove());
+        assertEquals(0, integerQueue.size);
 
         // add 2 items and remove 2 items
         integerQueue.add(2);
         integerQueue.add(3);
-        Assertions.assertEquals(2,integerQueue.peek());
-        Assertions.assertEquals(2,integerQueue.remove());
+        assertEquals(2,integerQueue.peek());
+        assertEquals(2,integerQueue.remove());
+        assertEquals(3,integerQueue.peek());
+        assertEquals(3,integerQueue.remove());
 
         // add 5 items and remove 5 items
+        integerQueue.add(2);
+        integerQueue.add(3);
+        assertEquals(2,integerQueue.peek());
+        assertEquals(2,integerQueue.remove());
+        assertEquals(1, integerQueue.size);
+        integerQueue.add(4);
+        integerQueue.add(5);
+        integerQueue.add(6);
+        integerQueue.add(7);
+        assertEquals(3,integerQueue.remove());
+        assertEquals(4,integerQueue.remove());
+        assertEquals(5,integerQueue.remove());
+        assertEquals(6,integerQueue.remove());
+        assertEquals(7,integerQueue.remove());
+        assertEquals(0, integerQueue.size);
+
 
 
         // add 5 items and remove 3 items
@@ -51,6 +69,7 @@ class QueueTest {
 
     @Test
     void add() {
+
     }
 
     @Test

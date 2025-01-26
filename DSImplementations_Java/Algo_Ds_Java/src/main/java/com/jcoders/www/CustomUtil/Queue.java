@@ -5,14 +5,13 @@ import lombok.NoArgsConstructor;
 
 /*Supported Operations:
 Generic queue Implementation
-add -- Add's element to stack.O(n) -- we need to fix this we need to have O(1) for add as well.
+add -- Add's element to stack.O(1)
 remove  -- Removes element from stack. O(1)
 Peek -- looks at top element without removing the element.O(1)
 size -- returns the number of elements present in the stack.O(1)
 */
 
-//fix the queue implementation we need to have O(1) for both push and pop operations
-
+@Getter
 @NoArgsConstructor
 public class Queue<E> {
 
@@ -21,7 +20,7 @@ public class Queue<E> {
     private QueueNode tail;
 
     @Getter
-    private int Size;
+    public int size;
 
     private class QueueNode{
         private E data;
@@ -34,7 +33,7 @@ public class Queue<E> {
 
     // adds an element to the end of the queue
     public void add(E data){
-        Size++;
+        size++;
         if(head == null ){
             // this is the first node point both head and tail to the first node.
             head = new QueueNode(data,null);
@@ -58,8 +57,8 @@ public class Queue<E> {
     public E remove(){
         QueueNode temp = head;
         head = head.next;
-        Size--;
-        if (this.getSize() == 0){
+        size--;
+        if (this.size == 0){
             head = null;
             tail = null;
         }
